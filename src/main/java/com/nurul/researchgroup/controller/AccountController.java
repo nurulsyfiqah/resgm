@@ -17,8 +17,8 @@ public class AccountController {
     private AccountService accService;
 
     @GetMapping("/")
-    public void init() {
-        System.out.println("Welcome to Research Group Management System");
+    public String init() {
+        return "Welcome to Research Group Management System";
     }
 
     @GetMapping("/signup/getaccountbyemail")
