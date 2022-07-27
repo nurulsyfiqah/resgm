@@ -16,6 +16,11 @@ public class AccountController {
     @Autowired
     private AccountService accService;
 
+    @GetMapping("/")
+    public void init() {
+        System.out.println("Welcome to Research Group Management System");
+    }
+
     @GetMapping("/signup/getaccountbyemail")
     public List<Account> getAccountByEmail(@RequestParam(name = "email") String email) {
             return accService.getAccountByEmail(email);
